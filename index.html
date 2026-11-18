@@ -7,7 +7,8 @@
   <meta name="description" content="서운중 희망 도서를 추천하고 공감 순위를 확인하는 서운책픽">
   <title>서운책픽 — 서운중 희망 도서</title>
   <link rel="icon" href="assets/icon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="styles-v3.css?v=3">
+  <link rel="stylesheet" href="styles-v3.css?v=4">
+  <link rel="stylesheet" href="styles-v4.css?v=4">
 </head>
 <body>
   <header class="topbar">
@@ -70,12 +71,16 @@
     </section>
 
     <section class="share-section">
-      <div><span class="eyebrow">OPEN THE SHELF</span><h2>친구와 같은 책을<br>골라 보세요</h2><p>QR을 찍으면 학생 추천 책장으로 바로 들어옵니다.</p><button class="outline-button" id="copyLinkButton" type="button">책장 링크 복사</button></div>
-      <img id="qrImage" src="assets/qr.png" alt="사이트 참여 QR 코드">
+      <div class="share-copy"><span class="eyebrow">DOHOON'S SCHOOL PROJECT</span><h2>장도훈이 만든<br>학생 참여 웹사이트</h2><p>필요한 곳을 골라 QR을 찍으면 바로 들어갑니다.</p><button class="outline-button" id="copyLinkButton" type="button">서운책픽 링크 복사</button></div>
+      <div class="qr-grid" aria-label="학생 참여 웹사이트 QR 코드 3개">
+        <a class="qr-card featured" href="https://dohoon819.github.io/seoun-book-pick/" target="_blank" rel="noopener"><img id="qrImage" src="assets/qr.png" alt="서운책픽 QR 코드"><b>서운책픽</b><span>희망 도서 추천</span></a>
+        <a class="qr-card" href="https://dohoon819.github.io/school-meal-vote/" target="_blank" rel="noopener"><img src="assets/qr-seoun-pick.png" alt="서운픽 QR 코드"><b>서운픽</b><span>급식·학생 의견</span></a>
+        <a class="qr-card" href="https://dohoon819.github.io/seoun-promises/" target="_blank" rel="noopener"><img src="assets/qr-seoun-promises.png" alt="서운약속 QR 코드"><b>서운약속</b><span>공약 진행 공개</span></a>
+      </div>
     </section>
   </main>
 
-  <footer><div class="footer-school"><span><img src="assets/seoun-official-logo.png" alt="서운중학교"></span><b id="footerName">학생 참여 공간</b></div><p id="footerCopy">학생이 직접 만들고 함께 사용하는 웹사이트</p><div><a href="privacy.html">개인정보처리방침</a><span>·</span><button id="footerShare" type="button">친구에게 공유</button></div></footer>
+  <footer><div class="footer-school"><span><img src="assets/seoun-official-logo.png" alt="서운중학교"></span><b id="footerName">학생 참여 공간</b><strong class="creator-name">제작 장도훈</strong></div><p id="footerCopy">학생이 직접 만들고 함께 사용하는 웹사이트</p><div><a href="privacy.html">개인정보처리방침</a><span>·</span><button id="footerShare" type="button">친구에게 공유</button></div></footer>
 
   <button class="mobile-compose" data-open-composer type="button">+ 책 추천</button>
 
@@ -84,6 +89,6 @@
   <dialog class="modal" id="identityDialog"><form class="modal-shell compact" id="identityForm"><button class="modal-close" data-close-identity type="button" aria-label="닫기">×</button><span class="eyebrow">MY NAME</span><h2>표시할 이름</h2><p>제안과 댓글에 표시되며 다른 사람과 같은 이름은 사용할 수 없어요.</p><label class="field"><span>이름</span><input id="identityInput" maxlength="20" placeholder="10101 OOO" required></label><button class="primary-button submit-button" type="submit">이 이름 사용하기</button></form></dialog>
 
   <div class="toast" id="toast" role="status" aria-live="polite"></div>
-  <script type="module" src="app.js?v=3"></script>
+  <script type="module" src="app.js?v=4"></script>
 </body>
 </html>
